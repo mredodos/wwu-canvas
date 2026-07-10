@@ -1,0 +1,102 @@
+# Copyright (C) 2026 WebWakeUp
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WWU Canvas 0.1.1-alpha\n"
+"Report-Msgid-Bugs-To: https://webwakeup.it/\n"
+"POT-Creation-Date: 2026-07-10 11:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: WebWakeUp\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WWU Workspace POT Generator\n"
+"X-Domain: wwu-canvas\n"
+
+#: 404.php:18
+msgid "Pagina non trovata"
+msgstr ""
+
+#: 404.php:20
+msgid "La pagina che cerchi non esiste o è stata spostata. Prova una ricerca, oppure torna alla home."
+msgstr ""
+
+#: 404.php:22
+msgid "Torna alla home"
+msgstr ""
+
+#: archive.php:26
+#: index.php:35
+msgid "Nessun contenuto trovato."
+msgstr ""
+
+#: comments.php:23
+msgid "%s commento"
+msgid_plural "%s commenti"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:44
+msgid "I commenti sono chiusi."
+msgstr ""
+
+#: header.php:25
+msgid "Salta al contenuto"
+msgstr ""
+
+#: inc/class-canvas-customizer.php:108
+msgid "WWU Canvas"
+msgstr ""
+
+#: inc/class-canvas-customizer.php:110
+msgid "Comportamento del tema sui contenuti NON costruiti con il Code & Visual Builder (blog, archivi, WooCommerce). Le pagine costruite col builder non sono mai toccate dal tema."
+msgstr ""
+
+#: inc/class-canvas-customizer.php:129
+msgid "Header/footer CVB su tutto il sito"
+msgstr ""
+
+#: inc/class-canvas-customizer.php:130
+msgid "Renderizza i fragment header/footer di default del Code & Visual Builder anche su blog, archivi e pagine WooCommerce. Quando il chrome CVB non è disponibile (plugin disattivo o fragment non configurati) appare un header minimo con logo e menu. I fragment di default si configurano in CVB → Settings. Disattivato: il tema non emette nessun header/footer."
+msgstr ""
+
+#: inc/class-canvas-customizer.php:149
+msgid "Tipografia neutra per contenuti non-CVB"
+msgstr ""
+
+#: inc/class-canvas-customizer.php:150
+msgid "Carica un piccolo foglio di stile (~8 KB) che rende leggibili articoli, archivi, ricerca e 404: titoli, paragrafi, liste, immagini, form. Nessuna opinione di design. Disattivato: i contenuti non-CVB usano i default del browser (canvas completamente blank)."
+msgstr ""
+
+#: inc/class-canvas-cvb-bridge.php:240
+msgid "WWU Canvas: aggiorna WWU Code and Visual Builder per abilitare il rendering di header/footer CVB su tutto il sito. Nel frattempo è attivo il chrome di fallback del tema (logo + menu)."
+msgstr ""
+
+#: inc/class-canvas-fallback-chrome.php:103
+msgid "© %1$s %2$s"
+msgstr ""
+
+#: inc/class-canvas-fallback-chrome.php:125
+#: inc/class-canvas-setup.php:90
+msgid "Menu footer"
+msgstr ""
+
+#: inc/class-canvas-fallback-chrome.php:76
+#: inc/class-canvas-setup.php:89
+msgid "Menu principale"
+msgstr ""
+
+#: search.php:22
+msgid "Risultati per: %s"
+msgstr ""
+
+#: search.php:32
+msgid "Nessun risultato. Prova con altre parole chiave."
+msgstr ""
+
+#: template-parts/entry-single.php:33
+msgid "Pagine:"
+msgstr ""

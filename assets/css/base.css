@@ -1,0 +1,143 @@
+/**
+ * WWU Canvas — base.css (~3 KB)
+ *
+ * Always-on (except CVB standalone pages): body reset, a11y helpers and the
+ * minimal fallback chrome. Deliberately NO global resets beyond body margin
+ * and NO typography opinions — those live in typography.css (toggle B).
+ * Fallback chrome styles are scoped to .wwu-canvas-fallback-* so they can
+ * never bleed into CVB-authored markup on theme-embedded pages.
+ */
+
+body {
+	margin: 0;
+}
+
+/* --- A11y helpers ------------------------------------------------------ */
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	border: 0;
+	word-wrap: normal !important;
+}
+
+.skip-link.screen-reader-text:focus {
+	position: fixed !important;
+	top: 8px;
+	left: 8px;
+	z-index: 100000;
+	width: auto;
+	height: auto;
+	padding: 12px 16px;
+	clip-path: none;
+	background: #fff;
+	color: #1d2327;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	font-size: 0.875rem;
+	line-height: 1;
+	text-decoration: none;
+	outline: 2px solid #1d2327;
+}
+
+/* --- Fallback header ---------------------------------------------------- */
+
+.wwu-canvas-fallback-header {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wwu-canvas-fallback-header__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0.75rem 1.25rem;
+}
+
+.wwu-canvas-fallback-header__brand .custom-logo {
+	display: block;
+	width: auto;
+	max-height: 60px;
+}
+
+.wwu-canvas-fallback-header__title {
+	color: inherit;
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+/* Covers both wp_nav_menu output and the wp_page_menu fallback (div.menu). */
+.wwu-canvas-fallback-nav ul,
+.wwu-canvas-fallback-header .menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 1.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wwu-canvas-fallback-nav a,
+.wwu-canvas-fallback-header .menu a {
+	display: inline-block;
+	padding: 0.25rem 0;
+	border-bottom: 2px solid transparent;
+	color: inherit;
+	font-size: 0.9375rem;
+	text-decoration: none;
+}
+
+.wwu-canvas-fallback-nav a:hover,
+.wwu-canvas-fallback-nav a:focus,
+.wwu-canvas-fallback-header .menu a:hover,
+.wwu-canvas-fallback-header .menu a:focus {
+	border-bottom-color: currentColor;
+}
+
+/* --- Fallback footer ---------------------------------------------------- */
+
+.wwu-canvas-fallback-footer {
+	margin-top: 3rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wwu-canvas-fallback-footer__nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.25rem 1.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem 1.25rem 0;
+	list-style: none;
+}
+
+.wwu-canvas-fallback-footer__nav a {
+	color: inherit;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.wwu-canvas-fallback-footer__nav a:hover,
+.wwu-canvas-fallback-footer__nav a:focus {
+	text-decoration: underline;
+}
+
+.wwu-canvas-fallback-footer__text {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem 1.25rem;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 0.875rem;
+	text-align: center;
+}

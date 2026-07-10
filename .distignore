@@ -1,0 +1,10 @@
+.distignore
+.gitignore
+.git
+.claude
+CLAUDE.md
+MASTER-wwu-canvas.md
+docs
+tests
+wwu-tools
+node_modules

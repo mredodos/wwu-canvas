@@ -1,0 +1,36 @@
+/*
+Theme Name: WWU Canvas
+Theme URI: https://webwakeup.it/
+Author: WebWakeUp
+Author URI: https://webwakeup.it/
+Description: Neutral companion theme for WWU Code and Visual Builder. Near-zero footprint: an optional bridge renders CVB header/footer fragments site-wide, an optional neutral stylesheet keeps non-builder content readable. Both toggles off = absolute blank canvas.
+Version: 0.1.1-alpha
+Requires at least: 6.6
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wwu-canvas
+Domain Path: /languages
+Tags: blank, page-builder
+Update URI: false
+*/
+
+/*
+ * Intentionally empty.
+ *
+ * All theme CSS lives in assets/css/ and is enqueued conditionally:
+ *   - base.css        a11y helpers + minimal fallback chrome (skipped on CVB
+ *                     standalone pages so the builder canvas stays clean)
+ *   - typography.css  neutral readable defaults for non-CVB content, loaded
+ *                     only when the "Tipografia neutra" Customizer toggle is ON
+ *
+ * This file exists for the theme header above and is never enqueued.
+ * `Update URI: false` blocks wordpress.org update collisions — updates flow
+ * through the CVB-bundled zip installer card (see docs/specs).
+ *
+ * `Requires at least: 6.6` is pinned by theme.json: the schema is version 3,
+ * which WordPress only understands from 6.6 onward (on 6.0-6.5 the v3-only
+ * settings — defaultSpacingSizes, the flipped defaultFontSizes semantics —
+ * are silently dropped rather than honored).
+ */

@@ -1,0 +1,12 @@
+# Internal working files — intentionally untracked in the public repo.
+# They live on the maintainer's machine only.
+.claude/
+CLAUDE.md
+MASTER-*.md
+docs/
+tests/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+node_modules/

@@ -2,9 +2,9 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WWU Canvas 0.1.1-alpha\n"
+"Project-Id-Version: WWU Canvas 0.1.2-alpha\n"
 "Report-Msgid-Bugs-To: https://webwakeup.it/\n"
-"POT-Creation-Date: 2026-07-10 11:59+0000\n"
+"POT-Creation-Date: 2026-07-11 12:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: WebWakeUp\n"
@@ -29,7 +29,7 @@ msgid "Torna alla home"
 msgstr ""
 
 #: archive.php:26
-#: index.php:35
+#: index.php:55
 msgid "Nessun contenuto trovato."
 msgstr ""
 
@@ -71,20 +71,21 @@ msgstr ""
 msgid "Carica un piccolo foglio di stile (~8 KB) che rende leggibili articoli, archivi, ricerca e 404: titoli, paragrafi, liste, immagini, form. Nessuna opinione di design. Disattivato: i contenuti non-CVB usano i default del browser (canvas completamente blank)."
 msgstr ""
 
-#: inc/class-canvas-cvb-bridge.php:240
+#: inc/class-canvas-cvb-bridge.php:249
 msgid "WWU Canvas: aggiorna WWU Code and Visual Builder per abilitare il rendering di header/footer CVB su tutto il sito. Nel frattempo è attivo il chrome di fallback del tema (logo + menu)."
 msgstr ""
 
-#: inc/class-canvas-fallback-chrome.php:103
+#: inc/class-canvas-fallback-chrome.php:135
 msgid "© %1$s %2$s"
 msgstr ""
 
-#: inc/class-canvas-fallback-chrome.php:125
+#: inc/class-canvas-fallback-chrome.php:157
 #: inc/class-canvas-setup.php:90
 msgid "Menu footer"
 msgstr ""
 
 #: inc/class-canvas-fallback-chrome.php:76
+#: inc/class-canvas-fallback-chrome.php:120
 #: inc/class-canvas-setup.php:89
 msgid "Menu principale"
 msgstr ""

@@ -76,7 +76,7 @@ final class WWU_Canvas_Fallback_Chrome {
 						'container_aria_label' => __( 'Menu principale', 'wwu-canvas' ),
 						'menu_class'           => 'wwu-canvas-fallback-menu',
 						'depth'                => 1,
-						'fallback_cb'          => 'wp_page_menu',
+						'fallback_cb'          => array( __CLASS__, 'page_menu_fallback' ),
 					)
 				);
 				?>
@@ -89,6 +89,38 @@ final class WWU_Canvas_Fallback_Chrome {
 		 * @since 0.1.0
 		 */
 		do_action( 'wwu_canvas_after_fallback_header' );
+	}
+
+	/**
+	 * `fallback_cb` for the primary menu when no menu is assigned.
+	 *
+	 * `wp_nav_menu()`'s own `container` / `container_aria_label` args are
+	 * ignored once it delegates to the fallback, and bare `wp_page_menu()`
+	 * emits a `<div class="menu">` with no navigation landmark — so a fresh
+	 * install (no primary menu yet) would expose page links with no `<nav>`
+	 * and no label to assistive tech. This wrapper restores parity with the
+	 * assigned-menu path: a labelled `<nav>` around `wp_page_menu()`.
+	 *
+	 * @since 0.1.2
+	 * @return void
+	 */
+	public static function page_menu_fallback() {
+		$menu = wp_page_menu(
+			array(
+				'depth'      => 1,
+				'menu_class' => 'wwu-canvas-fallback-menu',
+				'echo'       => false,
+			)
+		);
+
+		if ( '' === trim( (string) $menu ) ) {
+			return;
+		}
+		?>
+		<nav class="wwu-canvas-fallback-nav" aria-label="<?php esc_attr_e( 'Menu principale', 'wwu-canvas' ); ?>">
+			<?php echo $menu; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- core wp_page_menu() markup, titles escaped by its walker. ?>
+		</nav>
+		<?php
 	}
 
 	/**

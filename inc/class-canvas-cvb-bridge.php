@@ -93,11 +93,20 @@ final class WWU_Canvas_Cvb_Bridge {
 	/**
 	 * Whether the CVB ThemeBridge public API is available.
 	 *
+	 * Checks the two consumed static methods exist, not just the class.
+	 * A partial/mid-upgrade CVB that ships the class shell without the
+	 * methods would otherwise reach `call_user_func()` on a non-callable —
+	 * a PHP warning on every page load — and slip past the "please update"
+	 * admin notice (which gates on this method). Verifying the methods here
+	 * makes the degraded state fall back cleanly AND surface the notice.
+	 *
 	 * @since 0.1.0
 	 * @return bool
 	 */
 	public static function bridge_available() {
-		return class_exists( self::THEME_BRIDGE_CLASS );
+		return class_exists( self::THEME_BRIDGE_CLASS )
+			&& method_exists( self::THEME_BRIDGE_CLASS, 'render_chrome' )
+			&& method_exists( self::THEME_BRIDGE_CLASS, 'emit_global_fragments' );
 	}
 
 	/**

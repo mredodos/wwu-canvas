@@ -37,6 +37,17 @@
 	max-width: 1200px;
 }
 
+/*
+ * Contain the .alignfull viewport breakout. `100vw` (below) includes the
+ * scrollbar gutter while the visible viewport does not, so a full-width
+ * block would otherwise force a page-wide horizontal scrollbar. `clip`
+ * (not `hidden`) trims that overshoot WITHOUT creating a scroll container,
+ * so vertical page scroll and any nested position:sticky keep working.
+ */
+.wwu-canvas-main {
+	overflow-x: clip;
+}
+
 /* --- Headings ----------------------------------------------------------- */
 
 .wwu-canvas-content h1,
@@ -162,8 +173,17 @@
 
 /* --- Tables ------------------------------------------------------------- */
 
+/*
+ * `display: block` + `width: fit-content` + `max-width: 100%` lets a wide
+ * table scroll INSIDE itself (overflow-x: auto) instead of forcing the whole
+ * 720px prose column to overflow. Covers both Gutenberg `.wp-block-table`
+ * and bare classic-editor / pasted `<table>` markup with no wrapper element.
+ */
 .wwu-canvas-content table {
-	width: 100%;
+	display: block;
+	width: fit-content;
+	max-width: 100%;
+	overflow-x: auto;
 	margin: 0 0 1.5rem;
 	border-collapse: collapse;
 	font-size: 0.9375rem;
@@ -273,7 +293,7 @@
 
 .wwu-canvas-content .wwu-canvas-entry__meta {
 	margin: 0 0 0.5rem;
-	color: rgba(0, 0, 0, 0.55);
+	color: rgba(0, 0, 0, 0.6); /* #666 on #fff ≈ 5.7:1 — comfortably past WCAG AA (was 0.55 ≈ 4.7:1, borderline). */
 	font-size: 0.875rem;
 }
 
@@ -303,7 +323,7 @@
 	padding: 0.25rem 0.5rem;
 	text-align: center;
 	text-decoration: none;
-	border: 1px solid rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(0, 0, 0, 0.45); /* ≈ 3.3:1 on #fff — meets WCAG 1.4.11 non-text contrast (was 0.15 ≈ 1.4:1, boxes near-invisible). */
 	border-radius: 4px;
 }
 

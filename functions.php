@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WWU_CANVAS_VERSION', '0.1.1-alpha' );
+define( 'WWU_CANVAS_VERSION', '0.1.2-alpha' );
 define( 'WWU_CANVAS_DIR', get_template_directory() );
 define( 'WWU_CANVAS_URI', get_template_directory_uri() );
 

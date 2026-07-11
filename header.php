@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset="UTF-8" /><?php // Hardcoded (not blog_charset): last-word byte decoding if a proxy/CDN strips the Content-Type header. Mirrors the CVB frontend templates. ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
 </head>

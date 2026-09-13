@@ -10,3 +10,9 @@ tests/
 .DS_Store
 Thumbs.db
 node_modules/
+
+# AI agent / editor config — personal, never versioned.
+# NOTE: `.cursor/` does NOT cover `.cursorrules` — Cursor keeps rules in two
+# places (modern `.cursor/rules/` directory + legacy root file). Both needed.
+.cursor/
+.cursorrules

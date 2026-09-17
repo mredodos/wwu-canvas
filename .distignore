@@ -2,6 +2,8 @@
 .gitignore
 .git
 .claude
+.cursor
+.cursorrules
 CLAUDE.md
 MASTER-wwu-canvas.md
 docs
